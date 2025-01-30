@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Metadados da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário do Torcedor</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+    <!--Cabeçalho-->
+    <header>
+        <h1> 🦊 Formulário do Torcedor 🦊 </h1>
+        <ul class="lista2">
+            <li class="topico2"><a class="clique2" href="index.html">◀ Voltar</a></li>
+            <li class="topico2"><a class="clique2"> Preencha o Formulário:</a></li>
+        </ul>
+    </header>
+
+    <!--Estrutura Básica do Formulário-->
+    <form action="index.html">
+        <fieldset class="borda"> <!--Borda no formulário-->
+            <legend>Dados </legend> <!--Título da borda-->
+
+            <!--Campos de Entrada-->
+            <label for="nome">Nome Completo:</label>
+            <br>
+            <input class="inicio" type="text" id="nome" name="nome" required minlength="6"
+                placeholder="Digite seu Nome">
+            <br><br> <!--Espaço Dublo-->
+            <label for="e-mail">E-mail:</label>
+            <br>
+            <input class="inicio" type="email" id="e-mail" name="e-mail" placeholder="Digite seu E-mail">
+            <br> <br>
+            <label for="data">*Data de Nascimento:</label>
+            <br>
+            <input class="inicio" type="date" id="data" name="data" required>
+            <br><br>
+            <label for="senha">*Senha:</label>
+            <br>
+            <input class="inicio" type="password" id="senha" name="senha" required maxlength="10" minlength="4">
+            <br><br>
+            <label for="celular">Telefone:</label>
+            <br>
+            <input class="inicio" type="tel" id="celular" name="celular" minlength="9" maxlength="11"
+                placeholder="(00)00000-0000">
+            <br><br>
+
+            <!--Escolha de Páis-->
+            <label for="country">Selecione o seu País:</label>
+            <br>
+            <select id="country" nome="country">
+                <option value="" disabled selected>Selecione seu País</option>
+                <option value="br">Brasil</option>
+                <option value="usa">Estado Unidos</option>
+                <option value="ing">Inglaterra</option>
+                <option value="ca">Canadá</option>
+                <option value="ale">Alemanha</option>
+                <option value="fr">França</option>
+                <option value="es">Espanha</option>
+                <option value="it">Itália</option>
+                <option value="jp">Japão</option>
+                <option value="cn">China</option>
+            </select>
+            <br><br>
+
+            <!--Sexo-->
+            <label> Informe o seu gênero:</label>
+            <br>
+            <input type="radio" id="homem" name="genero" value="HOMEM" class="sexo">
+            <label for="homem">Homem</label>
+            <br>
+            <input type="radio" id="mulher" name="genero" value="MULHER" class="sexo">
+            <label for="mulher">Mulher</label>
+            <br>
+            <input type="radio" id="outro" name="genero" value="OUTRO" class="sexo">
+            <label for="outro">Outro</label>
+            <br><br>
+
+            <!--TextArea-->
+            Deixe o seu comentário:
+            <br>
+            <textarea name="comentario" placeholder="Deixe seu comentário..."></textarea>
+            <br><br>
+
+            <!--Termos e Condições-->
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">*Aceita os Termos e Condições</label>
+            <br><br>
+
+            <!--Botões-->
+            <input class="button" type="submit" value="Enviar" onclick="alert('Mensagem Enviada com sucesso!')">
+            <input class="button" type="reset" value="Restaurar">
+
+            <!--Imagem -->
+            <figure class="imagem">
+                <img class="img" src="copadobrasil.png">
+            </figure>
+            <figure class="imagem2">
+                <img class="img" src="copadobrasil2.png">
+            </figure>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
